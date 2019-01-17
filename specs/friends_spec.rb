@@ -112,6 +112,12 @@ def test_money_total
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
+def test_lend_money
+  lend_money(@person4,@person1,20)
+  result_1 = @person4[:monies]
+  result_2 = @person1[:monies]
+  assert_equal(result_1,0)
+end
 
 
 
